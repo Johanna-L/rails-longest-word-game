@@ -1,0 +1,12 @@
+<h1>Result</h1>
+<% if @english_word %>
+  <% if @included %>
+    <p><strong>Congratulations!</strong> <%= @attempt.upcase %> is a valid English word!</p>
+  <% else %>
+    <p>Sorry but <strong><%= @attempt.upcase %></strong>
+  <% end %>
+<% else %>
+  <p>Sorry but <strong><%= @attempt.upcase %></strong> does not seem to be a valid English word...</p>
+<% end %>
+
+<p><%= link_to "Play again", '/new' %></p>
